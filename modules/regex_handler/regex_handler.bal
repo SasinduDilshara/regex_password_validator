@@ -22,7 +22,7 @@ public isolated function checkSpecialCharacters(string password) returns boolean
 }
 
 public isolated function checkCommonWords(string password) returns boolean {
-    regexp:RegExp regExp = re `.*(?i:((password)|(letmein)|(abcdef)|(qwerty))).*`;
+    regexp:RegExp regExp = re `.*(?i:password|letmein|abcdef|qwerty).*`;
     return password.length() != 0 && !regExp.isFullMatch(password);
 }
 
