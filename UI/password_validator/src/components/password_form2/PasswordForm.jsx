@@ -83,7 +83,7 @@ function PasswordForm() {
       <form onSubmit={handleSubmit}>
         <div className="input-container">
           <label>Username </label>
-          <input type="text" name="uname" required autoComplete="off"/>
+          <input type="text" name="uname" required value={"Sasindu"} disabled={true} autoComplete="off"/>
         </div>
         <div className="input-container">
           <label>Password </label>
@@ -95,7 +95,7 @@ function PasswordForm() {
         </div>
       </form>
       <div className="password-strength">
-        <p>Password Strength:</p>
+        <p>Validating Password:</p>
         <ul>
           <li className={validLength ? valid : invalid}>{passwordLengthMessage}</li>
           <li className={validCapital ? valid : invalid}>{capitalLetterMessage}</li>
@@ -113,7 +113,7 @@ function PasswordForm() {
     <div className="PasswordForm">
       <div className="login-form">
         <div className="title">Sign Up</div>
-        {isSubmitted ? <div>Account uccessfullt Creatred</div> : renderForm}
+        {isSubmitted ? <div>Account created successfully</div> : renderForm}
       </div>
     </div>
   );
